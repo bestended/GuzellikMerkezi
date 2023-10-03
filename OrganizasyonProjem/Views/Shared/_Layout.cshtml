@@ -1,0 +1,491 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Kozmetik ürünler</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/adminTemplate/assets/img/favicon.png" rel="icon">
+    <link href="~/adminTemplate/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/adminTemplate/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/adminTemplate/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/adminTemplate/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/adminTemplate/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/adminTemplate/assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/adminTemplate/assets/css/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Append
+    * Updated: Sep 18 2023 with Bootstrap v5.3.2
+    * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+                <!-- Uncomment the line below if you also wish to use an image logo -->
+                <!-- <img src="~/adminTemplate/assets/img/logo.png" alt=""> -->
+                <h1>KOZMETİK</h1>
+                @*<span>.</span>*@
+            </a>
+
+            <!-- Nav Menu -->
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="#" class="active">Anasayfa</a></li>
+                    <li><a href="@Url.Action("Liste","Gorevliler")" class="active">Görevliler</a></li>
+                    <li><a href="@Url.Action("Liste","Hizmetler")" class="active">Hizmetler</a></li>
+                    <li><a href="@Url.Action("Liste","Malzemeler")" class="active">Malzemeler</a></li>
+                    <li><a href="@Url.Action("Liste","Salonlar")" class="active">Salonlar</a></li>
+
+                  
+                    <li><a href="blog.html">Blog</a></li>
+
+
+
+                </ul>
+
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav><!-- End Nav Menu -->
+
+            <a class="btn-getstarted" href="#">İletişim</a>
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- Hero Section - Home Page -->
+        <section id="hero" class="hero">
+
+            <img src="~/adminTemplate/assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+            <div class="container">
+                <div class="row">
+                    @*<div class="col-lg-10">
+                        <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Our Website</h2>
+                        <p data-aos="fade-up" data-aos-delay="200">We are team of talented designers making websites with Bootstrap</p>
+                    </div>*@
+                    @RenderBody()
+                  
+                </div>
+            </div>
+
+        </section><!-- End Hero Section -->
+        <!-- Clients Section - Home Page -->
+        <section id="clients" class="clients">
+
+            <div class="container-fluid" data-aos="fade-up">
+
+                <div class="row gy-4">
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="~/adminTemplate/assets/img/clients/client-1.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="~/adminTemplate/assets/img/clients/client-2.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="~/adminTemplate/assets/img/clients/client-3.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="~/adminTemplate/assets/img/clients/client-4.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="~/adminTemplate/assets/img/clients/client-5.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                    <div class="col-xl-2 col-md-3 col-6 client-logo">
+                        <img src="~/adminTemplate/assets/img/clients/client-6.png" class="img-fluid" alt="">
+                    </div><!-- End Client Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- End Clients Section -->
+        <!-- Stats Section - Home Page -->
+        <section id="stats" class="stats">
+
+            <img src="~/adminTemplate/assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+
+            <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="560" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Görevliler</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="1354" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Hizmetler</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="15056" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Malzemeler</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="182" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Salonlar</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                </div>
+
+            </div>
+
+        </section><!-- End Stats Section -->
+        <!-- Portfolio Section - Home Page -->
+        <section id="portfolio" class="portfolio">
+
+            <!--  Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Ürünlerimiz</h2>
+                <p>Birbirinden farklı ürünlerimizle fark yaratmaya devam ediyoruz</p>
+            </div><!-- End Section Title -->
+
+            <div class="container">
+
+                <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+                    <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+                        <li data-filter="*" class="filter-active">Hepsi</li>
+                        <li data-filter=".filter-app">Cilt</li>
+                        <li data-filter=".filter-product">Ağız</li>
+                        <li data-filter=".filter-branding">Göz</li>
+                    </ul><!-- End Portfolio Filters -->
+
+                    <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="~/img/krem.png" class="img-fluid" alt="">                     
+                            <div class="portfolio-info">
+                                <h4>Cilt kremi</h4>
+                                <p>Hassas ciltler için</p>
+                                <a href="~/img/krem.png" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                              
+                            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="~/img/dis2.png" class="img-fluid" alt="">
+                         
+                        <div class="portfolio-info">
+                                <h4>Diş sağlığı</h4>
+                                <p>Bembeyaz dişler için</p>
+                                <a href="~/img/dis2.png" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                               
+                            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- Göz -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="~/img/göz1.png" class="img-fluid" alt="">
+                       
+                        <div class="portfolio-info">
+                                <h4>Göz</h4>
+                                <p>Gülen gözler</p>
+                                <a href="~/img/göz1.png" title="Gözler" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="Gözler" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- krem2 -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="~/img/krem1.png" class="img-fluid" alt="">
+                           
+                        <div class="portfolio-info">
+                                <h4>El kremi</h4>
+                                <p>Cildiniz için en iyisi</p>
+                                <a href="~/img/krem1.png" title="El kremi" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="Detaylar" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- diş2 -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="~/img/dis1.png" class="img-fluid" alt="">
+                           
+                        <div class="portfolio-info">
+                                <h4>Dişler</h4>
+                                <p>Temiz dişler,güzel gülüşler için</p>
+                                <a href="~/img/dis1.png" title="Diş ürünleri" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="Detaylar" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+                        
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="~/img/göz2.png" class="img-fluid" alt="">
+                          
+                        <div class="portfolio-info">
+                                <h4>Göz</h4>
+                                <p>Güzel görünüm</p>
+                                <a href="~/img/göz2.png" title="Gözler" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="Detaylar" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- krem2 -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                            <img src="~/img/krem2.png" class="img-fluid" alt="">
+                          
+                        <div class="portfolio-info">
+                                <h4>Krem</h4>
+                                <p>En iyisi</p>
+                                <a href="~/img/krem2.png" title="Kremler" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="Detaylar" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                            <img src="~/img/dis.png" class="img-fluid" alt="">
+                            
+                        <div class="portfolio-info">
+                                <h4>Diş</h4>
+                                <p>Bembeyaz dişler</p>
+                                <a href="~/img/dis.png" title="Dişler" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="Dataylar" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+                            <img src="~/img/göz.png" class="img-fluid" alt="">
+                           
+                        <div class="portfolio-info">
+                                <h4>Göz</h4>
+                                <p>Güzel görünümlü gözler</p>
+                                <a href="~/img/göz.png" title="Gözler" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="Detaylar" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+
+                    </div><!-- End Portfolio Container -->
+
+                </div>
+
+            </div>
+
+        </section><!-- End Portfolio Section -->
+        <!-- Team Section - Home Page -->
+        <!-- Testimonials Section - Home Page -->
+        <!-- Recent-posts Section - Home Page -->
+        <!-- Contact Section - Home Page -->
+        <section id="contact" class="contact">
+
+            <!--  Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>İletişim</h2>
+                <p>7/24 Çağrı Merkezi Hizmeti</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-6">
+
+                        <div class="row gy-4">
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="200">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <h3>Adresimiz</h3>
+                                    <p>A108 Adam Street</p>
+                                    <p>New York, NY 535022</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="300">
+                                    <i class="bi bi-telephone"></i>
+                                    <h3>İletişim Numaralarımız</h3>
+                                    <p>+1 5589 55488 55</p>
+                                    <p>+1 6678 254445 41</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="400">
+                                    <i class="bi bi-envelope"></i>
+                                    <h3>E-Mail</h3>
+                                    <p>info@example.com</p>
+                                    <p>contact@example.com</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                            <div class="col-md-6">
+                                <div class="info-item" data-aos="fade" data-aos-delay="500">
+                                    <i class="bi bi-clock"></i>
+                                    <h3>Açılış saatleri</h3>
+                                    <p>Pazartesi - Cuma</p>
+                                    <p>9.00 - 17.00</p>
+                                </div>
+                            </div><!-- End Info Item -->
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                            <div class="row gy-4">
+
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Adınız" required>
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <input type="email" class="form-control" name="email" placeholder="Mail Adresiniz" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="subject" placeholder="Konu" required>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="message" rows="6" placeholder="Mesajınız" required></textarea>
+                                </div>
+
+                                <div class="col-md-12 text-center">
+                                    <div class="loading">Yükleniyor</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Mesajınız gönderildi.Teşekkürler!</div>
+
+                                    <button type="submit">Mesaj gönder</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div><!-- End Contact Form -->
+
+                </div>
+
+            </div>
+
+        </section><!-- End Contact Section -->
+
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span>Sosyal Medyada Biz</span>
+                    </a>
+                    <p>Sosyal medyada görüşlerinizi belirtebilir, aşağıdaki linklerden bizimle iletişime geçebilirsiniz.</p>
+                    <div class="social-links d-flex mt-4">
+                        <a href=""><i class="bi bi-twitter"></i></a>
+                        <a href=""><i class="bi bi-facebook"></i></a>
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <a href=""><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Kullanılabilir linkler</h4>
+                    <ul>
+                        <li><a href="#">Anasayfamız</a></li>
+                        <li><a href="#">Hakkımızda</a></li>
+                        <li><a href="#">Servislerimiz</a></li>
+                        <li><a href="#">Servis Dönemi</a></li>
+                        <li><a href="#">Kullanım Şartları</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Servislerimiz</h4>
+                    <ul>
+                        <li><a href="#">Tasarım</a></li>
+                        <li><a href="#">Geliştirmeler</a></li>
+                        <li><a href="#">Ürün Yönetimi</a></li>
+                        <li><a href="#">Ticaret</a></li>
+                        <li><a href="#">Grafikler</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4>İletişim</h4>
+                    <p>A108 Adam Street</p>
+                    <p>New York, NY 535022</p>
+                    <p>United States</p>
+                    <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                    <p><strong>Email:</strong> <span>info@example.com</span></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container copyright text-center mt-4">
+            <p>&copy; <span>Copyright</span> <strong class="px-1">Append</strong> <span>All Rights Reserved</span></p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+
+    </footer><!-- End Footer -->
+    <!-- Scroll Top Button -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Vendor JS Files -->
+    <script src="~/adminTemplate/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/adminTemplate/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/adminTemplate/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="~/adminTemplate/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/adminTemplate/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/adminTemplate/assets/vendor/aos/aos.js"></script>
+    <script src="~/adminTemplate/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/adminTemplate/assets/js/main.js"></script>
+
+</body>
+
+</html>

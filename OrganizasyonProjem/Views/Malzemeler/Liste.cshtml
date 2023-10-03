@@ -1,0 +1,68 @@
+﻿@model IEnumerable<OrganizasyonProjem.Models.MalzemelerSet>
+
+@{
+    ViewBag.Title = "Layoutt";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Liste</title>
+</head>
+<body>
+    <div style="margin-bottom:10px;">
+        @Html.ActionLink("Malzeme Ekle", "GorevliEY", null, new { @class = "btn btn-primary" })
+    </div>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MalzemeAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MalzemeGider)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HizmetNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fayda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aciklama)
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MalzemeAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MalzemeGider)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HizmetNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fayda)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Aciklama)
+                </td>
+              
+
+                <td>
+                    @Html.ActionLink("Güncelle", "GorevliEY", new { id = item.MalzemeNo }, new { @class = "btn btn-warning" }) |
+                    @Html.ActionLink("Sil", "Sil", new { id = item.MalzemeNo }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>

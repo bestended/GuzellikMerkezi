@@ -1,0 +1,67 @@
+﻿@model IEnumerable<OrganizasyonProjem.Models.HizmetlerSet>
+
+@{
+    ViewBag.Title = "Layoutt";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hizmet Listesi</title>
+</head>
+<body>
+     <div style="margin-bottom:10px;">
+        @Html.ActionLink("Hizmet Ekle", "GorevliEY", null, new { @class = "btn btn-primary" })
+    </div>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HizmetAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HizmetAmaci)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HizmetGider)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OdemeTuru)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GörevliNo)
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HizmetAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HizmetAmaci)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HizmetGider)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OdemeTuru)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GörevliNo)
+                </td>
+             
+                <td>
+                    @Html.ActionLink("Güncelle", "GorevliEY", new { id = item.HizmetNo }, new { @class = "btn btn-warning" }) |
+                    @Html.ActionLink("Sil", "Sil", new { id = item.HizmetNo }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
